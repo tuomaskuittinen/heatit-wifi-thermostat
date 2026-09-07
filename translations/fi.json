@@ -1,0 +1,189 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Lisää Heatit WiFi6 -termostaatti",
+        "description": "Anna termostaatin IP-osoite tai verkkonimi.\n\nNimestä tulee laitteen nimi, ja se näkyy myös entiteettien tunnuksissa. Jätä tyhjäksi, jos haluat käyttää laitteelle tallennettua nimeä.",
+        "data": {
+          "host": "IP-osoite tai verkkonimi",
+          "name": "Nimi"
+        }
+      },
+      "reconfigure": {
+        "title": "Määritä Heatit WiFi6 -termostaatti uudelleen",
+        "description": "Päivitä termostaatin osoite tai nimi. Kyseessä on oltava sama fyysinen laite.",
+        "data": {
+          "host": "IP-osoite tai verkkonimi",
+          "name": "Nimi"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Termostaattiin ei saatu yhteyttä. Tarkista osoite ja varmista, että laite on verkossa.",
+      "unknown": "Odottamaton virhe. Tarkista Home Assistantin loki."
+    },
+    "abort": {
+      "already_configured": "Tämä termostaatti on jo lisätty.",
+      "wrong_device": "Annetussa osoitteessa vastaa fyysisesti eri termostaatti. Voit vaihtaa vain tämän saman termostaatin osoitetta.",
+      "reconfigure_successful": "Termostaatin tiedot päivitettiin."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "internal_temperature": {
+        "name": "Sisäanturin lämpötila"
+      },
+      "floor_temperature": {
+        "name": "Lattialämpötila"
+      },
+      "external_temperature": {
+        "name": "Ulkoisen anturin lämpötila"
+      },
+      "power_consumption": {
+        "name": "Tehonkulutus"
+      },
+      "total_consumption": {
+        "name": "Energian kokonaiskulutus"
+      },
+      "thermostat_state": {
+        "name": "Termostaatin tila",
+        "state": {
+          "Idle": "Toimeton",
+          "Heating": "Lämmitys",
+          "Cooling": "Jäähdytys"
+        }
+      },
+      "open_window_time_remaining": {
+        "name": "Ikkunatunnistusta jäljellä"
+      },
+      "firmware_version": {
+        "name": "Laiteohjelmiston versio"
+      },
+      "device_name": {
+        "name": "Laitteen nimi"
+      },
+      "room": {
+        "name": "Huone"
+      },
+      "wifi_signal_strength": {
+        "name": "WiFi-signaalin voimakkuus"
+      },
+      "ssid": {
+        "name": "Verkon nimi"
+      },
+      "ip_address": {
+        "name": "IP-osoite"
+      },
+      "mac_address": {
+        "name": "MAC-osoite"
+      }
+    },
+    "number": {
+      "heating_setpoint": {
+        "name": "Lämmityksen asetuslämpötila"
+      },
+      "cooling_setpoint": {
+        "name": "Jäähdytyksen asetuslämpötila"
+      },
+      "eco_setpoint": {
+        "name": "Eko-tilan asetuslämpötila"
+      },
+      "internal_minimum_temperature": {
+        "name": "Sisäanturin lämpötilan alaraja"
+      },
+      "internal_maximum_temperature": {
+        "name": "Sisäanturin lämpötilan yläraja"
+      },
+      "floor_minimum_temperature": {
+        "name": "Lattialämpötilan alaraja"
+      },
+      "floor_maximum_temperature": {
+        "name": "Lattialämpötilan yläraja"
+      },
+      "external_minimum_temperature": {
+        "name": "Ulkoisen anturin lämpötilan alaraja"
+      },
+      "external_maximum_temperature": {
+        "name": "Ulkoisen anturin lämpötilan yläraja"
+      },
+      "internal_calibration": {
+        "name": "Sisäanturin kalibrointi"
+      },
+      "floor_calibration": {
+        "name": "Lattia-anturin kalibrointi"
+      },
+      "external_calibration": {
+        "name": "Ulkoisen anturin kalibrointi"
+      },
+      "temperature_control_hysteresis": {
+        "name": "Lämpötilasäädön hystereesi"
+      },
+      "active_display_brightness": {
+        "name": "Näytön kirkkaus aktiivitilassa"
+      },
+      "standby_display_brightness": {
+        "name": "Näytön kirkkaus valmiustilassa"
+      },
+      "size_of_load": {
+        "name": "Kytketyn kuorman teho"
+      },
+      "power_regulator_active_time": {
+        "name": "Tehosäätimen käyttöaste"
+      },
+      "action_after_error": {
+        "name": "Uudelleenyrityksen viive vikatilanteessa"
+      }
+    },
+    "select": {
+      "sensor_mode": {
+        "name": "Anturitila"
+      },
+      "regulation_mode": {
+        "name": "Säätötila"
+      },
+      "temperature_display": {
+        "name": "Näytettävä lämpötila"
+      },
+      "sensor_resistance": {
+        "name": "Anturin vastusarvo"
+      }
+    },
+    "switch": {
+      "disable_buttons": {
+        "name": "Painikkeiden lukitus"
+      },
+      "open_window_detection": {
+        "name": "Avoimen ikkunan tunnistus"
+      }
+    },
+    "button": {
+      "reset_energy_meter": {
+        "name": "Nollaa energiamittari"
+      },
+      "reset_settings": {
+        "name": "Palauta asetukset"
+      }
+    },
+    "binary_sensor": {
+      "window_detection": {
+        "name": "Ikkunan tunnistus"
+      }
+    }
+  },
+  "services": {
+    "factory_reset": {
+      "name": "Tehdasasetusten palautus",
+      "description": "Palauttaa termostaatin tehdasasetuksiin. Tämä pyyhkii myös WiFi-asetukset, jolloin laite katoaa verkosta ja se täytyy ottaa uudelleen käyttöön MyHeatit-sovelluksella laitteen luona.",
+      "fields": {
+        "device_id": {
+          "name": "Laite",
+          "description": "Termostaatti, joka palautetaan."
+        },
+        "confirm": {
+          "name": "Vahvistus",
+          "description": "Kirjoita reset vahvistaaksesi. Toimintoa ei voi perua etäyhteydellä."
+        }
+      }
+    }
+  }
+}

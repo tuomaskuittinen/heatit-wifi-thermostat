@@ -1,0 +1,12 @@
+factory_reset:
+  fields:
+    device_id:
+      required: true
+      selector:
+        device:
+          integration: heatit_wifi_thermostat
+    confirm:
+      required: true
+      example: reset
+      selector:
+        text:

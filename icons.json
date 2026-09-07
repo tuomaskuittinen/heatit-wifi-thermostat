@@ -1,0 +1,63 @@
+{
+  "entity": {
+    "sensor": {
+      "internal_temperature": { "default": "mdi:home-thermometer" },
+      "floor_temperature": { "default": "mdi:heating-coil" },
+      "external_temperature": { "default": "mdi:thermometer" },
+      "power_consumption": { "default": "mdi:flash" },
+      "total_consumption": { "default": "mdi:lightning-bolt" },
+      "thermostat_state": { "default": "mdi:heat-wave" },
+      "open_window_time_remaining": { "default": "mdi:timer" },
+      "firmware_version": { "default": "mdi:chip" },
+      "device_name": { "default": "mdi:tag" },
+      "room": { "default": "mdi:floor-plan" },
+      "wifi_signal_strength": { "default": "mdi:wifi" },
+      "ssid": { "default": "mdi:wifi-settings" },
+      "ip_address": { "default": "mdi:ip-network" },
+      "mac_address": { "default": "mdi:network" }
+    },
+    "number": {
+      "heating_setpoint": { "default": "mdi:fire" },
+      "cooling_setpoint": { "default": "mdi:snowflake" },
+      "eco_setpoint": { "default": "mdi:leaf" },
+      "internal_minimum_temperature": { "default": "mdi:thermometer-low" },
+      "internal_maximum_temperature": { "default": "mdi:thermometer-high" },
+      "floor_minimum_temperature": { "default": "mdi:thermometer-low" },
+      "floor_maximum_temperature": { "default": "mdi:thermometer-high" },
+      "external_minimum_temperature": { "default": "mdi:thermometer-low" },
+      "external_maximum_temperature": { "default": "mdi:thermometer-high" },
+      "internal_calibration": { "default": "mdi:tune" },
+      "floor_calibration": { "default": "mdi:tune" },
+      "external_calibration": { "default": "mdi:tune" },
+      "temperature_control_hysteresis": { "default": "mdi:sine-wave" },
+      "active_display_brightness": { "default": "mdi:brightness-7" },
+      "standby_display_brightness": { "default": "mdi:brightness-5" },
+      "size_of_load": { "default": "mdi:transmission-tower" },
+      "power_regulator_active_time": { "default": "mdi:timer-cog" },
+      "action_after_error": { "default": "mdi:restart-alert" }
+    },
+    "select": {
+      "sensor_mode": { "default": "mdi:tune-variant" },
+      "regulation_mode": { "default": "mdi:sine-wave" },
+      "temperature_display": { "default": "mdi:monitor" },
+      "sensor_resistance": { "default": "mdi:omega" }
+    },
+    "switch": {
+      "disable_buttons": {
+        "default": "mdi:lock-open-variant",
+        "state": { "on": "mdi:lock" }
+      },
+      "open_window_detection": {
+        "default": "mdi:window-closed-variant",
+        "state": { "on": "mdi:window-open-variant" }
+      }
+    },
+    "button": {
+      "reset_energy_meter": { "default": "mdi:counter" },
+      "reset_settings": { "default": "mdi:restore" }
+    }
+  },
+  "services": {
+    "factory_reset": "mdi:restore-alert"
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Add Heatit WiFi6 thermostat",
+        "description": "Enter the thermostat's IP address or hostname.\n\nThe name becomes the device name and drives the entity IDs, so \"Bathroom\" gives sensor.bathroom_floor_temperature. Leave it blank to use the name stored on the device.",
+        "data": {
+          "host": "IP address or hostname",
+          "name": "Name"
+        }
+      },
+      "reconfigure": {
+        "title": "Reconfigure Heatit WiFi6 thermostat",
+        "description": "Update the address or name of this thermostat. It must still be the same physical device.",
+        "data": {
+          "host": "IP address or hostname",
+          "name": "Name"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not reach the thermostat. Check the address and that the device is online.",
+      "unknown": "Unexpected error. Check the Home Assistant log."
+    },
+    "abort": {
+      "already_configured": "This thermostat is already configured.",
+      "wrong_device": "That address belongs to a different thermostat.",
+      "reconfigure_successful": "Thermostat updated."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "internal_temperature": {
+        "name": "Internal Temperature"
+      },
+      "floor_temperature": {
+        "name": "Floor Temperature"
+      },
+      "external_temperature": {
+        "name": "External Temperature"
+      },
+      "power_consumption": {
+        "name": "Power Consumption"
+      },
+      "total_consumption": {
+        "name": "Total Consumption"
+      },
+      "thermostat_state": {
+        "name": "Thermostat State",
+        "state": {
+          "Idle": "Idle",
+          "Heating": "Heating",
+          "Cooling": "Cooling"
+        }
+      },
+      "open_window_time_remaining": {
+        "name": "Open Window Time Remaining"
+      },
+      "firmware_version": {
+        "name": "Firmware Version"
+      },
+      "device_name": {
+        "name": "Device Name"
+      },
+      "room": {
+        "name": "Room"
+      },
+      "wifi_signal_strength": {
+        "name": "WiFi Signal Strength"
+      },
+      "ssid": {
+        "name": "SSID"
+      },
+      "ip_address": {
+        "name": "IP Address"
+      },
+      "mac_address": {
+        "name": "MAC Address"
+      }
+    },
+    "number": {
+      "heating_setpoint": {
+        "name": "Heating Setpoint"
+      },
+      "cooling_setpoint": {
+        "name": "Cooling Setpoint"
+      },
+      "eco_setpoint": {
+        "name": "ECO Setpoint"
+      },
+      "internal_minimum_temperature": {
+        "name": "Internal Minimum Temperature"
+      },
+      "internal_maximum_temperature": {
+        "name": "Internal Maximum Temperature"
+      },
+      "floor_minimum_temperature": {
+        "name": "Floor Minimum Temperature"
+      },
+      "floor_maximum_temperature": {
+        "name": "Floor Maximum Temperature"
+      },
+      "external_minimum_temperature": {
+        "name": "External Minimum Temperature"
+      },
+      "external_maximum_temperature": {
+        "name": "External Maximum Temperature"
+      },
+      "internal_calibration": {
+        "name": "Internal Calibration"
+      },
+      "floor_calibration": {
+        "name": "Floor Calibration"
+      },
+      "external_calibration": {
+        "name": "External Calibration"
+      },
+      "temperature_control_hysteresis": {
+        "name": "Temperature Control Hysteresis"
+      },
+      "active_display_brightness": {
+        "name": "Active Display Brightness"
+      },
+      "standby_display_brightness": {
+        "name": "Standby Display Brightness"
+      },
+      "size_of_load": {
+        "name": "Size Of Load"
+      },
+      "power_regulator_active_time": {
+        "name": "Power Regulator Active Time"
+      },
+      "action_after_error": {
+        "name": "Auto-retry Delay After Error"
+      }
+    },
+    "select": {
+      "sensor_mode": {
+        "name": "Sensor Mode"
+      },
+      "regulation_mode": {
+        "name": "Regulation Mode"
+      },
+      "temperature_display": {
+        "name": "Temperature Display"
+      },
+      "sensor_resistance": {
+        "name": "Sensor Resistance"
+      }
+    },
+    "switch": {
+      "disable_buttons": {
+        "name": "Disable Buttons"
+      },
+      "open_window_detection": {
+        "name": "Open Window Detection"
+      }
+    },
+    "button": {
+      "reset_energy_meter": {
+        "name": "Reset Energy Meter"
+      },
+      "reset_settings": {
+        "name": "Reset Settings"
+      }
+    },
+    "binary_sensor": {
+      "window_detection": {
+        "name": "Window Detection"
+      }
+    }
+  },
+  "services": {
+    "factory_reset": {
+      "name": "Factory reset",
+      "description": "Resets a thermostat to factory defaults. This erases the WiFi credentials, so the device leaves the network and must be re-onboarded through the MyHeatit app with physical access to the unit.",
+      "fields": {
+        "device_id": {
+          "name": "Device",
+          "description": "The thermostat to reset."
+        },
+        "confirm": {
+          "name": "Confirmation",
+          "description": "Type reset to confirm. This cannot be undone remotely."
+        }
+      }
+    }
+  }
+}
